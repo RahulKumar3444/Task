@@ -1,0 +1,90 @@
+<div style="overflow-y: scroll;">
+    <div class="pt-5 mt-3" style="margin-left: 270px;  margin-right: 80px;">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <div class="d-flex gap-2">
+                    <div class="round-img3" style="background-color: rgb(255, 200, 127);">
+                        f
+                      </div>
+                      <div>
+                        <span style="display: block; font-size: 16px; font-weight: 600;">Kyla Sarah</span>
+                        <span class="" style="display: block; font-size: 8px;">Welcome, here is the brief summary of your account.</span>
+                      </div>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <p class="px-3 py-1 text-white" style="border: none; border-radius: 3px; font-size: 10px; background-color: rgb(92, 26, 214);">Deposit Money</p>
+                <p class="px-3 py-1 text-black" style="border: none; border-radius: 3px; font-size: 10px; background-color: rgb(239, 205, 13);">Deposit Money</p>
+            </div>
+        </div>
+        <div class="card-grid mt-4" style="padding: 0px 12px;">
+            <div class="row" *ngFor="let row of [0, 1]">
+              <div class="card1 d-flex justify-content-between" *ngFor="let item of cards.slice(row * 4, (row + 1) * 4)">
+                 <div>
+                    <p style="font-size: 10px;" class="mb-0 text-start text-primary fw-semibold">{{ item.title }}</p>
+                    <p style="font-size: 8px; color: rgba(128, 128, 128, 0.541);" class="mb-0">{{ item.desc }}</p>
+                    <div class="price text-start">{{ item.price }}</div>
+                 </div>
+                 <div class="round-img2" [ngStyle]="{'background-color': getColor(item.title)}">
+                    {{ item.title.charAt(0).toUpperCase() }}
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card1 mt-3 d-flex gap-3">
+            <div>
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div>
+                <p style="font-size: 8px; color: rgba(128, 128, 128, 0.541);" class="mb-0">Check all</p>
+               <p style="font-size: 10px;" class="mb-0 text-start text-black fw-semibold">Wallet Balance</p>
+            </div>
+         </div>
+
+     <div class="d-flex gap-2">
+        <div class="p-2 mt-3 d-flex justify-content-center align-items-center gap-3" style="background-color: #f5f5f5; border-radius: 5px;">
+            <div>
+                <p style="font-size: 8px; color: rgba(128, 128, 128, 0.541);" class="mb-0">Profile QR Code</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=AnuragSharma" alt="QR Code" class="qr-img mt-2">
+                <p class="px-3 py-1 mt-2 text-white" style="border: none; border-radius: 3px; font-size: 8px; background-color: rgb(92, 26, 214);">Print Code</p>
+            </div>
+            <div>
+                <p style="font-size: 10px;"  class="mb-0 fw-semibold">Send Receive Money</p>
+               <p style="font-size: 10px;" class="mb-0 text-start text-black">Use the QR code to <br> easily handle your transaction</p>
+            </div>
+         </div>
+         <div class="p-2 mt-3 d-flex gap-3" style="background-color: #f5f5f5; border-radius: 5px;">
+            <div>
+                <p style="font-size: 12px;"  class="mb-0 fw-semibold">Contact Support Ticket</p>
+               <p style="font-size: 10px; color: gray;" class="mb-0 text-start mt-2">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. <br> Officiis laborum adipisci quibusdam <br>deleniti. Explicabo deleniti quis <br> atque voluptatum eius inventore!</p>
+               <p class="px-3 py-1 text-white text-center mt-3" style="border: none; border-radius: 3px; font-size: 8px; background-color: rgb(92, 26, 214);">Create Ticket Now</p>
+            </div>
+         </div>
+    
+     </div>
+
+   <div class="mt-5">
+    <div class="d-flex justify-content-between">
+        <p class="" style="font-size: 10px;">Recent Activities</p>
+        <p class="" style="font-size: 10px;">See All Transaction</p>
+    </div>
+    <div class="table-container">
+        <div class="table-row" *ngFor="let user of users">
+          <div class="left-section">
+            <div class="profile-circle">{{ user.name.charAt(0) }}</div>
+            <div class="details">
+              <div class="name">{{ user.name }}</div>
+              <div class="date">{{ user.date }}</div>
+            </div>
+          </div>
+          <div class="right-section">
+            ₹{{ user.price }}
+          </div>
+        </div>
+      </div>
+   </div>
+      
+    </div>
+</div>
+  

@@ -1,0 +1,14 @@
+.bg-pattern {
+    width: 100%;
+    min-height: 100vh;  
+    height: 100% !important;
+    background: rgba(108, 6, 225, 0.478);
+    object-fit: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+input::placeholder {
+    font-size: 12px; /* Change this to your desired size */
+    color: rgba(128, 128, 128, 0.556);
+}

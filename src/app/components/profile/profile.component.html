@@ -1,0 +1,46 @@
+<div class="py-5 mt-3" style="margin-left: 270px; ">
+    <h5 class="text-center">Your Profile</h5>
+    <p class="desc text-center">Manage your profile details, personal information, and security settings.</p>
+  
+    <!-- First Row -->
+    <div class="row" style="margin-right: 30px;">
+      <!-- Profile Card -->
+      <div class="card1 d-flex align-items-center">
+       
+    <div>
+        <h5>{{ user.name }}</h5>
+        <p class="">{{ user.profileText }}</p>
+        <button class="btn">Default Wallet</button>
+    </div>
+        <div class="profile-img">
+            <div class="circle">{{ user.name[0] }}</div>
+          </div>
+      </div>
+  
+      <!-- QR + Security Card -->
+      <div class="card1">
+        <img [src]="user.qrCode" alt="QR Code" class="qr-img">
+        <p><strong>Phone:</strong> {{ user.phone }}</p>
+        <button class="btn">Change Password</button>
+      </div>
+    </div>
+  
+    <!-- Second Row -->
+    <div class="row" style="margin-right: 30px;">
+      <!-- Personal Info -->
+      <div class="card1">
+        <h4>Personal Info</h4>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Phone:</strong> {{ user.phone }}</p>
+      </div>
+  
+      <!-- Address Info -->
+      <div class="card1">
+        <h4>Address Info</h4>
+        <p><strong>Address:</strong> {{ user.address }}</p>
+        <p><strong>City:</strong> {{ user.city }}</p>
+        <p><strong>Country:</strong> {{ user.country }}</p>
+      </div>
+    </div>
+  </div>
+  

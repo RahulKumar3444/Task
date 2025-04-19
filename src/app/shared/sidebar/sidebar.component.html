@@ -1,0 +1,31 @@
+<div class="sidebar">
+    <ul>
+      <li *ngFor="let item of menuItems"
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="menu-item">
+        <i [class]="item.icon"></i>
+        <span style="font-size: 10px;">{{ item.name }}</span>
+      </li>
+  
+      <p style="font-size: 11px; color: rgb(178, 178, 4); font-weight: 700;" class="mb-0">ACTIVITIES</p>
+      <li *ngFor="let item of activities"
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          class="menu-item">
+        <i [class]="item.icon"></i>
+        <span style="font-size: 10px;">{{ item.name }}</span>
+      </li>
+  
+      <p style="font-size: 11px; color: rgb(178, 178, 4); font-weight: 700;" class="mb-0">OTHERS</p>
+      <li *ngFor="let item of others"
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          class="menu-item">
+        <i [class]="item.icon"></i>
+        <span style="font-size: 10px;">{{ item.name }}</span>
+      </li>
+    </ul>
+  </div>
+  
