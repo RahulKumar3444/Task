@@ -1,65 +1,106 @@
 <div class="container-fluid px-0">
-    <div class="row">
-        <!-- Left Section: Image and Text -->
-        <div class="col-md-6 col-xl-5 d-none d-md-block">
-            <div class="bg-pattern d-flex flex-column justify-content-center align-items-center">
-               
-                    <div class="">
-                        <div class="transaction-text text-white">
-                            <span class="d-block">Hassle Free Money</span>
-                            <h2 class="fw-bold mb-0">TRANSACTIONS</h2>
-                            <span>Right at Your Fingertips</span>
-                        </div>
-                    </div>
-                    <div class="transaction-image">
-                        <img class="img-fluid" src="https://img.freepik.com/free-vector/forgot-password-concept-illustration_114360-1123.jpg?t=st=1745029128~exp=1745032728~hmac=a3f59c79eea2a5190b6b71b85c81d20cb4f98a2e0b0f0eac259c00090df5a44c&w=826" alt="Sign In Image" width="200px">
-                    </div>
+    <div class="row justify-content-center align-items-center">
+      <!-- Left Section: Image and Text -->
+      <div class="col-md-6 col-xl-5 d-none d-md-block">
+        <div
+          class="bg-pattern d-flex flex-column justify-content-center align-items-center"
+        >
+          <div class="">
+            <div class="transaction-text text-white text-start">
+              <span class="d-block" style="font-size: 20px"
+                >Hassle Free Money</span
+              >
+              <h2 class="fw-bold mb-0" style="font-size: 44px">TRANSACTIONS</h2>
+              <span class="" style="font-size: 24px"
+                >Right at Your Fingertips</span
+              >
             </div>
+          </div>
+          <div class="transaction-image">
+            <img
+              class="img-fluid mt-4"
+              src="https://img.freepik.com/free-vector/forgot-password-concept-illustration_114360-1123.jpg?t=st=1745029128~exp=1745032728~hmac=a3f59c79eea2a5190b6b71b85c81d20cb4f98a2e0b0f0eac259c00090df5a44c&w=826"
+              alt="Sign In Image"
+              width="400px"
+            />
+          </div>
         </div>
-
-        <!-- Right Section: Sign In Form -->
-        <div class="col-md-6 col-12 col-xl-7">
-            <div class="d-flex mt-5 justify-content-center align-items-center">
-                <div class="mx-auto">
-                    <div class="d-flex align-items-center mb-3">
-                        <a href="" class="d-inline-flex align-items-center back-btn">
-                            <span class="ms-1" style="font-size: 12px; color: gray;">Back</span>
-                        </a>
-                    </div>
-
-                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                        <div class="auth-module-header text-start">
-                            <h5 class=" mb-3">Sign In</h5>
-                            <p class=" mb-0" style="font-size: 12px; color: gray;">Don’t have an account? <a href="">Sign up here</a></p>
-                        </div>
-
-                        <div class="form-group mb-3">
-                            <label class="form-label" style="font-size: 12px;">Email Address <span class="star">*</span></label>
-                            <input type="text" formControlName="username" class="form-control" placeholder="User Name" name="email_only" id="email_only" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="" style="font-size: 12px;">Password <span class="star">*</span></label>
-                            <div>
-                                <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password" name="password" required>
-                                <span class="eye-icon-hide d-none cursor-pointer" id="eye-icon-hide"></span>
-                            </div>
-                        </div>
-
-                        <div class="d-grid mb-3">
-                            <button class="bg-primary text-white" style="border: none;" type="submit"  [disabled]="loginForm.invalid">
-                                <span id="login-btn-text" style="font-size: 12px;">Login</span>
-                                <span id="rightAngleSvgIcon"> 
-                                </span>
-                            </button>
-                        </div>
-
-                        <div class="forgot-link text-center mb-3">
-                            <a href="" style="font-size: 12px;">Forgot Password?</a>
-                        </div>
-                    </form>
+      </div>
+  
+      <!-- Right Section: Sign In Form -->
+      <div class="col-md-6 col-12 col-xl-7">
+        <div class="d-flex mt-5 justify-content-center align-items-center">
+          <div class="mx-auto">
+            <div class="d-flex align-items-center mb-3">
+              <a href="" class="d-inline-flex align-items-center back-btn">
+                <span class="ms-1" style="font-size: 20px; color: gray"
+                  >Back</span
+                >
+              </a>
+            </div>
+  
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="auth-module-header text-start">
+                <h5 class="mb-3" style="font-size: 34px">Sign In</h5>
+                <p class="mb-0" style="font-size: 18px; color: gray">
+                  Don’t have an account? <a href="">Sign up here</a>
+                </p>
+              </div>
+  
+              <div class="form-group mb-3 mt-2">
+                <label class="form-label" style="font-size: 18px"
+                  >Email Address <span class="star">*</span></label
+                >
+                <input
+                  type="text"
+                  formControlName="username"
+                  class="form-control"
+                  placeholder="User Name"
+                  name="email_only"
+                  id="email_only"
+                  required
+                />
+              </div>
+  
+              <div class="mb-3">
+                <label class="" style="font-size: 18px"
+                  >Password <span class="star">*</span></label
+                >
+                <div>
+                  <input
+                    type="password"
+                    formControlName="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                    name="password"
+                    required
+                  />
+                  <span
+                    class="eye-icon-hide d-none cursor-pointer"
+                    id="eye-icon-hide"
+                  ></span>
                 </div>
-            </div>
+              </div>
+  
+              <div class="d-grid mb-3">
+                <button
+                  class="bg-primary py-2 text-white"
+                  style="border: none"
+                  type="submit"
+                  [disabled]="loginForm.invalid"
+                >
+                  <span id="login-btn-text" style="font-size: 18px">Login</span>
+                  <span id="rightAngleSvgIcon"> </span>
+                </button>
+              </div>
+  
+              <div class="forgot-link text-center mb-3">
+                <a href="" style="font-size: 12px">Forgot Password?</a>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
